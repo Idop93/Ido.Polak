@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="forms.css">    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 Forms</title>
+</head>
+<body>
+    <h2 class="header"> Sign Up</h2>
+    <form>
+        <label id="inst">Please enter your details</label><br><br>
+        <label for="Fname">First name:</label>
+        <input type="text" id="Fname" name="Fname"><br>
+        <label for="Lname">Last name:</label>
+        <input type="text" id="Lname" name="Lname"><br>
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email"><br>
+        <label for="Bday">Birth day:</label>
+        <input type="date" id="Bday" name="Bday"><br>
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" name="Password"><br>
+        <input type="submit" value="Submit">        
+    </form>
+    <h2 class="header">Contact</h2>
+    <form>
+        <label id="inst1">Please enter your contact details</label><br><br>
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street"><br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city"><br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country"><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
