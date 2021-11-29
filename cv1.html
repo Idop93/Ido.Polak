@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+<h2>Fill your details</h2>
+ <script>
+     const successCallback = (position) => {
+       console.log(position);
+     };
+     const errorCallback= (error) => {
+       console.log(error);
+     };
+     navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+      enableHighAccuracy: true
+     });
+
+    </script>
+
+<form action="" method="post">
+    <label for="fname">First name:</label>
+    <input id = "f-name" type="text" id = "fname" name="fname" class="Buxa"><br><br>
+    <label for="lname">Last name:</label>
+    <input id = "l-name" type="text" id="lname" name="lname" class="Buxa"><br><br>
+    <label for="Email">Email:</label>
+    <input id = "e-mail" type="email" id="Email" name="Email" class="Buxa" pattern=".+@globex\.com" size="30" required><br><br>
+    <button onclick="myFunction()">Verify email</button>
+    <p id="email_validation"></p>
+    <label for="comment">Tell me about one of your hobbies:</label><br>
+    <textarea id="comment" name="comment" cols = "30" rows="10" class="Buxa"></textarea><br><br>
+    <input type="submit" value="Submit" class="Buxa">
+
+    <script>
+    function myFunction() {
+    const inpObj = document.getElementById("e-mail");
+    if (!inpObj.checkValidity()) {
+    document.getElementById("email_validation").innerHTML = inpObj.validationMessage;
+    } else {
+    document.getElementById("email_validation").innerHTML = "Valid email";
+       }
+    }
+    </script>
+</form>
+<br><a href = "cv.html"> Back </a>
+</body>
+</html>
+
